@@ -20,7 +20,7 @@ template_id = os.environ["TEMPLATE_ID"]
 
 def get_weather():
 
-  url ='{"code":0,"msg":"操作成功","data":{"total":7,"sourceName":"墨迹天气","list":[{"city":"淮安","lastUpdateTime":"2022-08-22 16:55:08","date":"2022-08-22","weather":"阴","temp":38.0,"humidity":"78%","wind":"南风2级","pm25":19.0,"pm10":32.0,"low":25.0,"high":38.0,"airData":"42","airQuality":"优","dateLong":1661097600000,"weatherType":2,"windLevel":2,"province":"江苏"},{"city":"淮安","lastUpdateTime":"2022-08-22 16:11:00","date":"2022-08-23","weather":"大雨","humidity":"未知","wind":"东北风","pm25":0.0,"low":20.0,"high":26.0,"airData":"80","airQuality":"良","dateLong":1661184000000,"weatherType":9,"windLevel":1,"province":"江苏"},{"city":"淮安","lastUpdateTime":"2022-08-22 16:11:00","date":"2022-08-24","weather":"多云","humidity":"未知","wind":"东北风","pm25":0.0,"low":18.0,"high":28.0,"airData":"55","airQuality":"良","dateLong":1661270400000,"weatherType":1,"windLevel":1,"province":"江苏"},{"city":"淮安","lastUpdateTime":"2022-08-22 16:11:00","date":"2022-08-25","weather":"多云","humidity":"未知","wind":"东风","pm25":0.0,"low":21.0,"high":29.0,"airData":"55","airQuality":"良","dateLong":1661356800000,"weatherType":1,"windLevel":2,"province":"江苏"}],"logoUrl":"http://iflycar.hfdn.openstorage.cn/xfypicture/dev/logo/moji.png"}}'
+  url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=淮安" 
   res = requests.get(url).json()
   weather = res['data']['list'][0]
   return weather['weather'], math.floor(weather['temp'])
