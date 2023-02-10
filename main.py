@@ -10,7 +10,7 @@ today = datetime.now()
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 birthday = os.environ['BIRTHDAY']
-  weather_key = os.environ['WEATHER_KEY']
+weather_key = os.environ['WEATHER_KEY']
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
 
