@@ -10,7 +10,6 @@ today = datetime.now()
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 birthday = os.environ['BIRTHDAY']
-weather_key = os.environ['WEATHER_KEY']
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
 
@@ -20,7 +19,7 @@ template_id = os.environ["TEMPLATE_ID"]
 
 def get_weather():
 
-  url = "https://restapi.amap.com/v3/weather/weatherInfo?="+city+"&key="+weather_key
+  url = "https://restapi.amap.com/v3/weather/weatherInfo?="+city+"&key=0e0ad2a7b1bd30a1bd69a75677ed49e2"
   res = requests.get(url).json()
   weather = res['data']['list'][0]
   return weather['weather'], math.floor(weather['temp'])
