@@ -21,7 +21,7 @@ def get_weather():
 
   url = "https://restapi.amap.com/v3/weather/weatherInfo?city=320803&key="+city
   res = requests.get(url).json()
-  weather = res['data']['lives'][0]
+  weather = res['lives'][0]
   return weather['weather'], math.floor(weather['temp'])
 
 def get_count():
